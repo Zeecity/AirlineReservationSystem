@@ -1,7 +1,6 @@
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
+
 
 public class Main
 {
@@ -18,16 +17,13 @@ public class Main
         myFrame.setVisible(true);
         myFrame.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
 
-        book_flight.addActionListener(new ActionListener()
+        book_flight.addActionListener(e ->
         {
-            public void actionPerformed(ActionEvent e)
+            if (e.getSource() == book_flight)
             {
-                if (e.getSource() == book_flight)
-                {
-                    Book.bookFlight();
-                }
-
+                Book.bookFlight();
             }
+
         });
     }
     public static void main(String[] args)

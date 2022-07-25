@@ -1,7 +1,5 @@
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 
 public class Book
 {
@@ -20,22 +18,18 @@ public class Book
         myFrame.setVisible(true);
         myFrame.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
 
-        round_trip.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                if (e.getSource() == round_trip) {
-                    RoundTrip.roundtrip();
-                }
-
+        round_trip.addActionListener(e ->
+        {
+            if (e.getSource() == round_trip) {
+                RoundTrip.roundTrip();
             }
 
         });
 
-        one_way.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                if (e.getSource() == one_way) {
-                    OneWay.oneway();
-                }
-
+        one_way.addActionListener(e ->
+        {
+            if (e.getSource() == one_way) {
+                OneWay.oneway();
             }
 
         });

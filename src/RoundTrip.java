@@ -1,4 +1,3 @@
-import java.util.Calendar;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -11,7 +10,7 @@ public class RoundTrip
 
     static String dayOfWeek;
     static String dayOfWeek2;
-    public static void roundtrip()
+    public static void roundTrip()
     {
 
         String [] States  = {"Abuja", "Lagos", "Benin"};
