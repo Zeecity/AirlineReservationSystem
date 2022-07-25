@@ -7,16 +7,28 @@ public class Ticket
     {
         JFrame myFrame = new JFrame("Zero-day Airlines");
 
-        JLabel output = new JLabel("Your Ticket Has Been Booked");
-        JLabel yourTicket = new JLabel( " from " + RoundTrip.location + " Seat Number" + Search.seatNum );
+        try
+        {
+            int[] your_ticket = new int[Search.nOfSeats];
+            Search.seatNum = Search.seatNum + 1;
 
 
-        myFrame.add(output);
-        myFrame.add(yourTicket);
+            JLabel output = new JLabel("Your Ticket Has Been Booked");
+            JLabel yourTicket = new JLabel(" from " + RoundTrip.location + " Seat Number" + Search.seatNum);
 
-        myFrame.setLayout(new GridLayout(4, 2));
-        myFrame.setSize(500, 200);
-        myFrame.setVisible(true);
-        myFrame.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
+
+            myFrame.add(output);
+            myFrame.add(yourTicket);
+        } catch (Exception e)
+        {
+            JLabel output2 = new JLabel("Unable to book ticket");
+            myFrame.add(output2);
+        }
+
+            myFrame.setLayout(new GridLayout(4, 2));
+            myFrame.setSize(500, 200);
+            myFrame.setVisible(true);
+            myFrame.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
+
     }
 }

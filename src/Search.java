@@ -6,7 +6,7 @@ import java.awt.event.ActionListener;
 public class Search
 {
     static int seatNum = 0;
-    static int nOfSeats = 50;
+    static int nOfSeats = 5;
     public static void search()
     {
         String [] time = {"6:00", "6:30", "7:00", "7:30", "8:00", "8:30", "9:00", "9:30", "10:00", "10:30", "11:00", "11:30",
@@ -77,7 +77,6 @@ public class Search
             {
                 if (e.getSource() == bookTicket) {
                     nOfSeats = nOfSeats - 1;
-                    seatNum = seatNum + 1 ;
 
                     Ticket.ticket();
 
