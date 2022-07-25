@@ -23,8 +23,6 @@ public class Search
             JLabel output = new JLabel(RoundTrip.location + " to " + RoundTrip.location2 + " Leaving:"
                     + RoundTrip.dayOfWeek + " " +  time[0] + " to " + time[2]);
             myFrame.add(output);
-            JButton bookTicket = new JButton("Boot Ticket");
-            myFrame.add(bookTicket);
         }
 
         else if(RoundTrip.location == "Lagos" && RoundTrip.location2 == "Abuja")
@@ -32,8 +30,6 @@ public class Search
             JLabel output = new JLabel(RoundTrip.location + " to " + RoundTrip.location2 + ": "
                     + RoundTrip.dayOfWeek + " " +  time[0] + " to " + time[2]);
             myFrame.add(output);
-            JButton bookTicket = new JButton("Boot Ticket");
-            myFrame.add(bookTicket);
         }
 
         else if(RoundTrip.location == "Abuja" && RoundTrip.location2 == "Benin")
@@ -41,8 +37,6 @@ public class Search
             JLabel output = new JLabel(RoundTrip.location + " to " + RoundTrip.location2 + ": "
                     + RoundTrip.dayOfWeek + " " +  time[0] + " to " + time[2]);
             myFrame.add(output);
-            JButton bookTicket = new JButton("Boot Ticket");
-            myFrame.add(bookTicket);
         }
 
         else if(RoundTrip.location == "Lagos" && RoundTrip.location2 == "Benin")
@@ -50,8 +44,6 @@ public class Search
             JLabel output = new JLabel(RoundTrip.location + " to " + RoundTrip.location2 + ": "
                     + RoundTrip.dayOfWeek + " " +  time[0] + " to " + time[2]);
             myFrame.add(output);
-            JButton bookTicket = new JButton("Boot Ticket");
-            myFrame.add(bookTicket);
         }
 
         else if(RoundTrip.location == "Benin" && RoundTrip.location2 == "Lagos")
@@ -59,8 +51,6 @@ public class Search
             JLabel output = new JLabel(RoundTrip.location + " to " + RoundTrip.location2 + ": "
                     + RoundTrip.dayOfWeek + " " +  time[0] + " to " + time[2]);
             myFrame.add(output);
-            JButton bookTicket = new JButton("Boot Ticket");
-            myFrame.add(bookTicket);
         }
 
         else if(RoundTrip.location == "Benin" && RoundTrip.location2 == "Abuja")
@@ -68,8 +58,7 @@ public class Search
             JLabel output = new JLabel(RoundTrip.location + " to " + RoundTrip.location2 + ": "
                     + RoundTrip.dayOfWeek + " " +  time[0] + " to " + time[2]);
             myFrame.add(output);
-            JButton bookTicket = new JButton("Boot Ticket");
-            myFrame.add(bookTicket);
+
         }
         else if(RoundTrip.location == RoundTrip.location2)
         {
@@ -77,14 +66,24 @@ public class Search
             myFrame.add(output);
         }
 
-
-
+        JButton bookTicket = new JButton("Boot Ticket");
+        myFrame.add(bookTicket);
 
         myFrame.setLayout(new GridLayout(4, 2));
         myFrame.setSize(500, 200);
         myFrame.setVisible(true);
         myFrame.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
 
+        bookTicket.addActionListener(new ActionListener()
+        {
+            public void actionPerformed(ActionEvent e)
+            {
+                if (e.getSource() == bookTicket) {
+                    Ticket.ticket();
+
+                }
+            }
+        });
 
 
     }
