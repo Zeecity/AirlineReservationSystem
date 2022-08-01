@@ -2,7 +2,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-
+//Nike
 public class OneWay
 {
     public static void oneway()
@@ -60,7 +60,7 @@ public class OneWay
         myFrame.add(search);
 
         myFrame.setLayout(new GridLayout(6, 2));
-        myFrame.setSize(500, 200);
+        myFrame.setSize(700, 400);
         myFrame.setVisible(true);
 
         search.addActionListener(new ActionListener() {
@@ -79,11 +79,19 @@ public class OneWay
                     }
                 }
                 Object selection3 = day1.getSelectedItem();
-                for(int j = 0; j < States.length ; j ++)
+                for(int j = 0; j < days.length ; j ++)
                 {
                     if (selection3 == days[j])
                     {
                         RoundTrip.dayOfWeek = days[j];
+                    }
+                }
+                Object selection5 = caClass1.getSelectedItem();
+                for(int j = 0; j < classes.length ; j ++)
+                {
+                    if (selection5 == classes[j])
+                    {
+                        Book.caclass2 = classes[j];
                     }
                 }
                 if (e.getSource() == search) {

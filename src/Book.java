@@ -1,8 +1,9 @@
 import javax.swing.*;
 import java.awt.*;
-
+//Esther
 public class Book
 {
+    static String caclass2;
     public static void bookFlight()
     {
         JFrame myFrame = new JFrame("Zero-day Airlines");
@@ -14,7 +15,7 @@ public class Book
         myFrame.add(one_way);
 
         myFrame.setLayout(new GridLayout(4, 2));
-        myFrame.setSize(500, 200);
+        myFrame.setSize(700, 400);
         myFrame.setVisible(true);
         myFrame.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
 

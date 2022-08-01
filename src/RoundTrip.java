@@ -2,6 +2,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+//Nike
 
 public class RoundTrip
 {
@@ -10,6 +11,8 @@ public class RoundTrip
 
     static String dayOfWeek;
     static String dayOfWeek2;
+
+
     public static void roundTrip()
     {
 
@@ -77,7 +80,7 @@ public class RoundTrip
         myFrame.add(search);
 
         myFrame.setLayout(new GridLayout(6, 2));
-        myFrame.setSize(500, 200);
+        myFrame.setSize(700, 400);
         myFrame.setVisible(true);
 
 
@@ -98,6 +101,7 @@ public class RoundTrip
                 }
                 Object selection3 = day1.getSelectedItem();
                 Object selection4 = day2.getSelectedItem();
+
                 for(int j = 0; j < States.length ; j ++)
                 {
                     if (selection3 == days[j])
@@ -107,6 +111,14 @@ public class RoundTrip
                     if (selection4 == days[j])
                     {
                         dayOfWeek2 = days[j];
+                    }
+                }
+                Object selection5 = caClass1.getSelectedItem();
+                for(int j = 0; j < classes.length ; j ++)
+                {
+                    if (selection5 == classes[j])
+                    {
+                        Book.caclass2 = classes[j];
                     }
                 }
                 if (e.getSource() == search) {

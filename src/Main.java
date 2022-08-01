@@ -1,5 +1,8 @@
 import javax.swing.*;
 import java.awt.*;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+//Trinty
 
 
 public class Main
@@ -13,7 +16,7 @@ public class Main
         myFrame.add(book_flight);
 
         myFrame.setLayout(new GridLayout(4, 2));
-        myFrame.setSize(500, 200);
+        myFrame.setSize(500, 400);
         myFrame.setVisible(true);
         myFrame.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
 
@@ -21,15 +24,19 @@ public class Main
         {
             if (e.getSource() == book_flight)
             {
-                Book.bookFlight();
+                UserName.userName();
             }
 
         });
-    }
-    public static void main(String[] args)
-    {
 
+
+    }
+
+    public static void main(String[] args) throws IOException
+    {
         Main airline = new Main();
         airline.runn();
+
+
     }
 }
